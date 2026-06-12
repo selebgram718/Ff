@@ -1,0 +1,260 @@
+/* TEMA WARNA KHAS FREE FIRE (DARK & NEON ORANGE) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Impact', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #0b0c10;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+/* Navigasi */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #1f2833;
+    border-bottom: 3px solid #ff4a00;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff4a00;
+    text-shadow: 0 0 10px rgba(255, 74, 0, 0.5);
+}
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #ff4a00;
+}
+
+/* Banner Utama */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(11, 12, 16, 0.85), #0b0c10), url('https://unsplash.com') no-repeat center/cover;
+    border-bottom: 2px solid #1f2833;
+}
+.hero h1 {
+    font-size: 45px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 3px 3px #ff4a00;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-family: 'Segoe UI', sans-serif;
+    color: #c5c6c7;
+    font-size: 16px;
+}
+
+/* Fitur/Keunggulan */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 5%;
+    flex-wrap: wrap;
+    background-color: #11141a;
+}
+.feat-box {
+    background-color: #1f2833;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 14px;
+    border-left: 4px solid #ff4a00;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Kontainer Utama */
+.container {
+    padding: 60px 5%;
+}
+.container h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #fff;
+    border-bottom: 3px solid #ff4a00;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Kartu Akun */
+.card {
+    background-color: #1f2833;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #45a29e;
+    transition: 0.3s;
+    position: relative;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 15px rgba(255, 74, 0, 0.4);
+    border-color: #ff4a00;
+}
+.badge-ready {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #2ed573;
+    color: black;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #ff4a00;
+}
+.card-body {
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+.card-body h3 {
+    font-family: 'Impact', sans-serif;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+.desc {
+    font-size: 14px;
+    color: #c5c6c7;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+.price {
+    font-family: 'Impact', sans-serif;
+    font-size: 24px;
+    color: #ff4a00;
+    margin-bottom: 15px;
+}
+
+/* Tombol Katalog */
+.btn {
+    display: block;
+    text-align: center;
+    background-color: #ff4a00;
+    color: #fff;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.btn:hover {
+    background-color: #e04100;
+    box-shadow: 0 0 10px rgba(255, 74, 0, 0.6);
+}
+
+/* Form Box Setor Bot */
+.form-box {
+    background-color: #1f2833;
+    padding: 35px;
+    border-radius: 8px;
+    border: 2px solid #ff4a00;
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', sans-serif;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #ff4a00;
+    text-transform: uppercase;
+}
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #0b0c10;
+    border: 1px solid #45a29e;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+}
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff4a00;
+    box-shadow: 0 0 5px rgba(255, 74, 0, 0.5);
+}
+.warning-text {
+    font-size: 13px;
+    color: #ffbe76;
+    margin-bottom: 25px;
+    background-color: rgba(255, 190, 118, 0.1);
+    padding: 12px;
+    border-left: 4px solid #ffbe76;
+    border-radius: 4px;
+    line-height: 1.5;
+}
+.btn-submit {
+    width: 100%;
+    background-color: #ff4a00;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-submit:hover {
+    background-color: #e04100;
+    box-shadow: 0 0 10px rgba(255, 74, 0, 0.6);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #11141a;
+    color: #666;
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+    border-top: 2px solid #1f2833;
+}
